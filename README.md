@@ -14,6 +14,7 @@ To run this project, ensure you have the following installed:
 
 1. [Anaconda/Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 2. [Git](https://git-scm.com/)
+3. [MAFFT](https://mafft.cbrc.jp/alignment/software/)
 
 ---
 
@@ -50,9 +51,8 @@ To maintain consistency, here is the recommended directory structure for the pro
 ```
 Cas13Hunter/
 ├── data/                 # Raw and processed viral genome data
-├── src/                  # Python scripts for pipeline modules
+├── scripts/                  # Python scripts for pipeline modules
 ├── notebooks/            # Jupyter notebooks for experimentation
-├── tests/                # Unit tests for the pipeline
 ├── environment.yml       # Conda environment configuration file
 └── README.md             # Project documentation
 ```
