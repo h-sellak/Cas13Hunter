@@ -1,0 +1,77 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore virtual environment directories
+env/
+venv/
+.venv/
+
+# Ignore Conda environment files (other than environment.yml)
+*.conda
+*.yaml~
+
+# Ignore compiled code and libraries
+*.so
+*.dll
+*.dylib
+*.lib
+*.o
+*.a
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.lock
+
+# Ignore test result files
+*.coverage
+coverage.xml
+nosetests.xml
+*.pytest_cache/
+
+# Ignore large data files (e.g., raw FASTA or alignment outputs)
+data/raw/*
+data/processed/*
+data/results/*
+
+# Allow sample data for demonstration purposes
+!data/raw/sample_viral_sequences.fasta
+
+# Ignore output from bioinformatics tools (e.g., CD-HIT, alignment tools)
+*.clstr
+*.aln
+*.msa
+*.tree
+*.hmm
+
+# Ignore large binary files (tracked by Git LFS if needed)
+*.fasta
+*.fastq
+*.tar.gz
+*.zip
+*.bz2
+
+# Ignore outputs from the pipeline
+results/
+outputs/
+*.png
+*.pdf
+*.html
+
+# Ignore logs and temporary files from Git
+.git/
+.gitignore~
+*.rej
+*.orig
