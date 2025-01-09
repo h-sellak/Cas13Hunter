@@ -49,8 +49,6 @@ nosetests.xml
 *.hmm
 
 # Ignore large binary files (tracked by Git LFS if needed)
-*.fasta
-*.fastq
 *.tar.gz
 *.zip
 *.bz2
