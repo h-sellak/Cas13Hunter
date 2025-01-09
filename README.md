@@ -46,16 +46,99 @@ To run this project, ensure you have the following installed:
 
 ## Directory Structure
 
-To maintain consistency, here is the recommended directory structure for the project:
-
 ```
 Cas13Hunter/
-├── data/                 # Raw and processed viral genome data
-├── scripts/                  # Python scripts for pipeline modules
-├── notebooks/            # Jupyter notebooks for experimentation
-├── environment.yml       # Conda environment configuration file
-└── README.md             # Project documentation
+├── data/
+│   ├── raw/               # Raw viral genome sequences
+│   ├── processed/         # Processed and aligned sequences
+├── notebooks/             # Jupyter notebooks for experimentation
+│   ├── 01_data_preprocessing.ipynb     # Preprocessing of raw sequences
+│   ├── 02_alignment_analysis.ipynb     # Multiple sequence alignment and conserved region analysis
+├── scripts/               # Python scripts for pipeline modules
+│   ├── preprocess_data.py             # Script for sequence preprocessing
+│   ├── run_alignment.py               # Script for running MAFFT alignment
+├── environment.yml        # Conda environment configuration file
+└── README.md              # Project documentation
+
 ```
+
+---
+
+## Notebooks
+
+1. **`01_data_preprocessing.ipynb`:**
+
+   - Prepares raw viral genome sequences for analysis by:
+      - Removing duplicates.
+      - Filtering sequences by length and ambiguity.
+      - Calculating and filtering by GC content.
+      - Replacing ambiguous bases with likely alternatives.
+   - Output: Cleaned sequences saved to `data/processed/cleaned_sequences.fasta`.
+
+2. **`02_alignment_analysis.ipynb`:**
+
+   - Performs multiple sequence alignment (MSA) using MAFFT.
+   - Analyzes conservation scores to identify conserved genome regions.
+   - Visualizes conservation across genome positions.
+   - Output: Aligned sequences saved to `data/processed/aligned_sequences.fasta` and conserved positions saved to `data/processed/conserved_regions.npy`.
+
+
+---
+
+## Scripts
+
+`preprocess_data.py`
+   
+   - Preprocesses raw viral genome sequences by:
+      - Removing duplicates.
+      - Filtering by length and ambiguity.
+      - Replacing ambiguous bases.
+      - Filtering sequences by GC content.
+   - Usage:
+
+   ```bash
+   python scripts/preprocess_data.py
+   ```
+
+`run_alignment.py`
+   
+   - Performs MSA using MAFFT with FFT-NS-2 mode for speed and auto-configured threading.
+   - Dynamically determines the optimal number of CPU threads based on system resources.
+   - Usage:
+   
+   ```bash
+   python scripts/run_alignment.py
+   ```
+
+---
+
+## Running the Pipeline
+
+1. **Prepare the Raw Data:**
+
+   - Place your viral genome sequences (in FASTA format) in the `data/raw/`directory.
+
+2. **Run Preprocessing:**
+
+   - Execute the preprocessing script:
+   ```bash
+   python scripts/preprocess_data.py
+   ```
+   - This generates cleaned_sequences.fasta in the `data/processed/` directory.
+
+3. **Run Alignment and Conserved Region Analysis:**
+
+   - Execute the alignment script:
+   ```bash
+   python scripts/run_alignment.py
+   ```
+   - This generates:
+      - `aligned_sequences.fasta` (aligned sequences).
+      - `conserved_regions.npy` (conserved positions).
+
+4. **Explore the Notebooks:**
+   
+   - Use the notebooks for additional visualization and experimentation. 
 
 ---
 
