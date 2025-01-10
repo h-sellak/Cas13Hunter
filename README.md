@@ -54,9 +54,11 @@ Cas13Hunter/
 ├── notebooks/             # Jupyter notebooks for experimentation
 │   ├── 01_data_preprocessing.ipynb     # Preprocessing of raw sequences
 │   ├── 02_alignment_analysis.ipynb     # Multiple sequence alignment and conserved region analysis
+│   ├── 03_crispr_target_design.ipynb   # CRISPR-Cas13 guide RNA design
 ├── scripts/               # Python scripts for pipeline modules
 │   ├── preprocess_data.py             # Script for sequence preprocessing
 │   ├── run_alignment.py               # Script for running MAFFT alignment
+│   ├── design_crispr_targets.py       # Script to design CRISPR-Cas13 guide RNAs
 ├── environment.yml        # Conda environment configuration file
 └── README.md              # Project documentation
 
