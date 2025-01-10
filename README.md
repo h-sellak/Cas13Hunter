@@ -84,6 +84,18 @@ Cas13Hunter/
    - Visualizes conservation across genome positions.
    - Output: Aligned sequences saved to `data/processed/aligned_sequences.fasta` and conserved positions saved to `data/processed/conserved_regions.npy`.
 
+3. **`03_crispr_target_design.ipynb`:**
+
+   - Designs CRISPR-Cas13 guide RNAs targeting conserved regions identified in the alignment step.
+   - Evaluates guide RNAs based on:
+      - Length (e.g., 22 bases).
+      - GC content (acceptable range: 30–70%).
+   - Extracts sequences around conserved positions to generate guide RNA candidates.
+   - Saves the designed guide RNAs with metadata, including:
+      - Conserved positions targeted by the guides.
+      - Sequence IDs for traceability.
+      - Guide RNA sequences and their GC content.
+   - **Output**: Designed guides saved to `data/processed/designed_guides.csv` (file size: ~282 MB, downloadable [here](https://drive.google.com/drive/folders/12uoIgzKzAe_GwLIIGcSItiC5uZxeNBFX?usp=sharing)).
 
 ---
 
@@ -111,6 +123,26 @@ Cas13Hunter/
    ```bash
    python scripts/run_alignment.py
    ```
+
+`design_crispr_targets.py`
+   
+   - Designs CRISPR-Cas13 guide RNAs targeting conserved regions identified in the alignment step.
+   - Features:
+      - Extracts sequences around conserved positions to generate guide RNA candidates.
+      - Evaluates guide RNAs based on:
+         - Length (e.g., 22 bases).
+         - GC content (acceptable range: 30–70%).
+      - Saves valid guide RNAs with metadata, including:
+         - Conserved positions targeted by the guides.
+         - Sequence IDs for traceability.
+         - Guide RNA sequences and their GC content.
+   - Usage:
+   
+   ```bash
+   python scripts/design_crispr_targets.py
+   ```
+   - Output:
+      - Valid guide RNAs saved to `data/processed/designed_guides.csv` (file size: ~282 MB, downloadable [here](https://drive.google.com/drive/folders/12uoIgzKzAe_GwLIIGcSItiC5uZxeNBFX?usp=sharing)).
 
 ---
 
