@@ -200,8 +200,6 @@ Cas13Hunter/
 
 ---
 
----
-
 ## Next Steps
 
 The Cas13Hunter pipeline is a work in progress, with several planned enhancements to improve its functionality, scalability, and accuracy. Here are the key areas of development:
