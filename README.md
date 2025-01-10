@@ -144,14 +144,30 @@ Cas13Hunter/
 
 ## Next Steps
 
-1. **Data Preparation**:
-   - Collect viral genome sequences in FASTA/FASTQ format and save them in the `data/raw/` directory.
+The Cas13Hunter pipeline is a work in progress, with several planned enhancements to improve its functionality, scalability, and accuracy. Here are the key areas of development:
 
-2. **Run the Pipeline**:
-   - Coming soon: Detailed instructions on running the sequence alignment and analysis pipeline.
+1. **Off-Target Analysis and Validation of Guide RNAs**:
+   - Incorporate off-target analysis to ensure designed guide RNAs are specific and minimize unintended targeting.
+   - Validate guide RNAs against reference genomes and other viral sequences to identify and filter potential off-target effects.
 
-3. **Contribute**:
-   - Contributions are welcome! Fork the repository, make your changes, and submit a pull request.
+2. **Additional Preprocessing Steps**:
+   - Expand the current preprocessing workflow beyond filtering, deduplication, and GC content calculations.
+   - Implement advanced quality control and sequence filtering methods to handle complex datasets and ensure high-quality input for downstream analyses.
+
+3. **Enhanced MSA Solutions**:
+   - Introduce state-of-the-art alternatives to MAFFT for multiple sequence alignment, such as:
+     - **Clustal Omega** and **MUSCLE** for improved accuracy.
+     - **Kalign3**, a GPU-accelerated tool for faster alignment.
+   - Evaluate these alternatives to improve both alignment speed and accuracy.
+
+4. **Scalability**:
+   - Optimise the pipeline to handle large-scale datasets efficiently.
+   - Scale the pipeline to process thousands or even millions of sequences through:
+     - Code optimisation.
+     - Leveraging HPC cluster for testing and performance enhancement.
+
+These enhancements will ensure that Cas13Hunter remains a robust and scalable tool for CRISPR-Cas13 target identification and RNA therapeutic design.
+
 
 ---
 
@@ -159,8 +175,11 @@ Cas13Hunter/
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+
 ---
 
 ## Contact
 
 For questions or collaboration inquiries, please reach out to `hsellak@outlook.com`.
+
+> **Note:** Contributions are welcome! Fork the repository, make your changes, and submit a pull request.
