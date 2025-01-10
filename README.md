@@ -144,6 +144,32 @@ Cas13Hunter/
 
 ---
 
+## Important Note: Accessing the `designed_guides.csv` File
+
+The `designed_guides.csv` file, which contains:
+- **Conserved positions** targeted by the designed guide RNAs.
+- **Sequence IDs** for traceability.
+- **Guide RNA sequences** and their associated GC content.
+
+This file is **282 MB** in size and cannot be hosted directly on GitHub due to repository size limitations.
+
+### Download the File:
+You can download the `designed_guides.csv` file from the following link:
+[Download `designed_guides.csv` from Google Drive](https://drive.google.com/drive/folders/12uoIgzKzAe_GwLIIGcSItiC5uZxeNBFX?usp=sharing)
+
+Once downloaded, place the file in the following directory:
+
+```
+Cas13Hunter/
+├── data/
+│   ├── processed/
+
+```
+
+---
+
+---
+
 ## Next Steps
 
 The Cas13Hunter pipeline is a work in progress, with several planned enhancements to improve its functionality, scalability, and accuracy. Here are the key areas of development:
